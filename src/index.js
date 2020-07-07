@@ -80,6 +80,9 @@ class SlideShow extends React.PureComponent {
   }
 
   goTo(activeIndex) {
+    if (typeof this.props.onMainImageChanged === 'function') {
+      this.props.onMainImageChanged(activeIndex);
+    }
     this.setState({activeIndex});
   }
 
@@ -161,7 +164,8 @@ SlideShow.defaultProps = {
   indicators: false,
   thumbnails: false,
   infinite: false,
-  onImageClick: undefined
+  onImageClick: undefined,
+  onMainImageChanged: undefined
 };
 
 export default SlideShow;
