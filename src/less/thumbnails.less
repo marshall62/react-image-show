@@ -11,13 +11,15 @@
 
 .ss-thumbnail {
   display: inline-block;
-  width: 20%;
+  //width: 15%; //original
   padding: 3px;
   cursor: pointer;
 
   > img {
-    max-width: 100%;
-    vertical-align: middle;
+    //max-width: 100%; // orig
+    //max-width: 100px;
+    height: 130px;
+    //vertical-align: middle; //orig
     &.ss-active {
       outline: 3px solid #337ab7;
     }
@@ -26,6 +28,6 @@
 
 @media only screen and (min-width: @sm) {
   .ss-thumbnail {
-    width: 15%;
+    //width: 15%;
   }
 }
